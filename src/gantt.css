@@ -225,7 +225,7 @@
 }
 
 .gantt-row-even > .gantt-row-background {
-    background-color: #EFEFEF;
+    background-color: #ffffff;
 }
 
 .gantt-row {
@@ -233,7 +233,7 @@
 }
 
 .gantt-row-height {
-    height: 2em;
+    height: 3em;
 }
 
 .gantt-task {
