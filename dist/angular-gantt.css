@@ -88,7 +88,7 @@
 
 .gantt-header-row .gantt-column-header {
     position: absolute;
-    border-right: 1px solid #dddddd;
+    /* border-right: 1px solid #dddddd; */
 }
 
 .gantt-header-row .gantt-column-header-last {
@@ -287,6 +287,7 @@
     overflow: hidden;
     white-space: nowrap;
     line-height: 2em;
+    color: #ffffff;
 }
 
 .gantt-task-content > span {
