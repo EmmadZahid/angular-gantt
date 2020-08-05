@@ -57,7 +57,6 @@
 .gantt-task-overview {
     height: 40%;
     top: 40%;
-    -webkit-filter: grayscale(0.6);
     filter: grayscale(0.6);
 }
 

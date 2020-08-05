@@ -298,7 +298,7 @@
 
         grunt.registerTask('buildSite', ['clean:site', 'run:buildDocs', 'run:buildDemo', 'copy:demoToSite', 'replace:site', 'replace:siteIndexTitle']);
 
-        grunt.registerTask('dist', ['clean:dist', 'build', 'buildSite', 'copy:assetsToDist', 'uglify', 'cssmin']);
+        grunt.registerTask('dist', ['clean:dist', 'build', 'copy:assetsToDist', 'uglify', 'cssmin']);
 
         grunt.registerTask('plunker', ['connect:plunker']);
 

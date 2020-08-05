@@ -4295,12 +4295,53 @@ angular.module('gantt.tree.templates', []).run(['$templateCache', function ($tem
         '            <a ng-disabled="isCollapseDisabled()" data-nodrag\n' +
         '               class="gantt-tree-handle-button btn btn-xs"\n' +
         '               ng-class="{\'gantt-tree-collapsed\': collapsed, \'gantt-tree-expanded\': !collapsed}"\n' +
-        '               ng-click="!isCollapseDisabled() && toggle()"><span\n' +
-        '                class="gantt-tree-handle glyphicon glyphicon-chevron-down"\n' +
+        '               ng-click="!isCollapseDisabled() && toggle()">\n' +
+        '               <!-- <span class="gantt-tree-handle glyphicon glyphicon-chevron-down"\n' +
         '                ng-class="{\n' +
         '                \'glyphicon-chevron-right\': collapsed, \'glyphicon-chevron-down\': !collapsed,\n' +
-        '                \'gantt-tree-collapsed\': collapsed, \'gantt-tree-expanded\': !collapsed}"></span>\n' +
+        '                \'gantt-tree-collapsed\': collapsed, \'gantt-tree-expanded\': !collapsed}"></span> -->\n' +
+        '                <span class="gantt-tree-handle" ng-class="{\'gantt-tree-collapsed\': collapsed, \'gantt-tree-expanded\': !collapsed}">\n' +
+        '                    <svg ng-if="!collapsed" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 490.667 490.667" style="enable-background:new 0 0 490.667 490.667;" xml:space="preserve" width="16" height="16" class=""><g><g><circle style="fill:#94C84C" cx="245.333" cy="245.333" r="245.333" data-original="#AED67A" class="active-path" data-old_color="#AED67A"></circle><path style="fill:#FCFCFC" d="M64,234.667h362.667V256H64V234.667z" data-original="#FCFCFC" class="" data-old_color="#FF6243"></path></g></g> </svg>\n' +
+        '                    <svg ng-if="collapsed" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve" width="16" height="16">\n' +
+        '                        <path style="fill:#fff;" d="M240,8C111.87,8,8,111.87,8,240s103.87,232,232,232s232-103.87,232-232S368.13,8,240,8z M240,336v-96  V336z"></path>\n' +
+        '                        <g>\n' +
+        '                            <path style="fill:#eee;" d="M240,480C107.452,480,0,372.548,0,240S107.452,0,240,0s240,107.452,240,240   C479.85,372.486,372.486,479.85,240,480z M240,16C116.288,16,16,116.288,16,240s100.288,224,224,224s224-100.288,224-224   C463.859,116.347,363.653,16.141,240,16z"></path>\n' +
+        '                            <path style="fill:#94c84c;" d="M336,232h-88v-88c0-4.418-3.582-8-8-8s-8,3.582-8,8v88h-88c-4.418,0-8,3.582-8,8s3.582,8,8,8h88v88   c0,4.418,3.582,8,8,8s8-3.582,8-8v-88h88c4.418,0,8-3.582,8-8S340.418,232,336,232z"></path>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        <g>\n' +
+        '                        </g>\n' +
+        '                        </svg>\n' +
+        '                </span>\n' +
         '            </a>\n' +
+        '            \n' +
         '            <span gantt-row-label class="gantt-label-text" gantt-bind-compile-html="getRowContent()"/>\n' +
         '        </div>\n' +
         '    </div>\n' +
@@ -4309,8 +4350,7 @@ angular.module('gantt.tree.templates', []).run(['$templateCache', function ($tem
         '    <li ng-repeat="row in childrenRows" ui-tree-node>\n' +
         '        <div ng-include="\'plugins/tree/treeBodyChildren.tmpl.html\'"></div>\n' +
         '    </li>\n' +
-        '</ol>\n' +
-        '');
+        '</ol>');
     $templateCache.put('plugins/tree/treeHeader.tmpl.html',
         '<div class="gantt-tree-header" ng-style="{height: $parent.ganttHeaderHeight + \'px\'}">\n' +
         '    <div ng-if="$parent.ganttHeaderHeight" class="gantt-row-label gantt-row-label-header gantt-tree-row gantt-tree-header-row"><span class="gantt-label-text" gantt-bind-compile-html="getHeaderContent()"/></div>\n' +
