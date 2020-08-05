@@ -286,6 +286,7 @@
     vertical-align: middle;
     overflow: hidden;
     white-space: nowrap;
+    line-height: 2em;
 }
 
 .gantt-task-content > span {
